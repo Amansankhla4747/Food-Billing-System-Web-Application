@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .di1{
+            background-image: url(stephanie-mccabe-U3zasaqWD-I-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            border: 8px dashed rgb(14, 138, 200); 
+            margin-left: 300px; 
+            margin-top: 25px; 
+            width: 60%;
+            
+        }
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            color: rgb(14, 138, 200);
+            font-weight: bold;
+        }
+        .di2{
+            height: 20px; 
+            text-align:center;
+        }
+        .dii2{
+            display: none;
+            background-image: url(stephanie-mccabe-U3zasaqWD-I-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            border: 8px dashed rgb(14, 138, 200); 
+            margin-left: 300px; 
+            margin-top: 25px; 
+            width: 60%;
+            
+        }
+        @media print{
+            .abcd{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="di1" id="di1" >
+
+        <h1 style="text-align: center; margin: 50px;">Wanderlust Brews</h1>
+    <div style=" display: flex; margin-top: 50px;">
+        <div style="display: flex; margin-left: 30px;">
+            <h3> ENTER NAME :</h3>
+            <input type="text" id="n1" pattern="{A-Za-z}{100}" style="width: 40%; height: 50%;margin-top: 5px;">
+        </div>
+        <div style="display: flex; margin-left: 150px;">
+            <h3>MOBILE NUMBER :</h3>
+            <input type="number" id="m1" style="width: 40%; height: 50%;margin-top: 5px;">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; ">
+        <input type="checkbox" id="ch1" onclick="h()">
+        <h3 id="food21">PIZZA </h3>
+        <div style=" display: inline-block;" id="di2">
+            <input type="number" placeholder="Price" disabled  id="p1"
+                onkeyup="a()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="q1"
+                onkeyup="a()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="d1"
+                onkeyup="a()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="t1"
+                onkeyup="a()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; ">
+        <input type="checkbox" id="ch2" onclick="h1()">
+        <h3 >BURGER </h3>
+        <div style=" display: inline-block;" id="di2">
+            <input type="number" placeholder="Price" disabled  id="p2"
+                onkeyup="b()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="q2"
+                onkeyup="b()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="d2"
+                onkeyup="b()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="t2"
+                onkeyup="c()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; ">
+        <input type="checkbox" id="ch3" onclick="h2()">
+        <h3 >PASTA</h3>
+        <div style=" display: inline-block;" id="di2">
+            <input type="number" placeholder="Price" disabled  id="p3"
+                onkeyup="c()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="q3"
+                onkeyup="c()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="d3"
+                onkeyup="c()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="t3"
+                onkeyup="c()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; ">
+        <input type="checkbox" id="ch4" onclick="h3()">
+        <h3 >NOODLES</h3>
+        <div style=" display: inline-block;" id="di2">
+            <input type="number" placeholder="Price" disabled  id="p4"
+                onkeyup="d()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="q4"
+                onkeyup="d()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="d4"
+                onkeyup="d()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="t4"
+                onkeyup="d()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; ">
+        <input type="checkbox" id="ch5" onclick="h4()">
+        <h3>SANDWICH</h3>
+        <div style=" display: inline-block;" id="di2">
+            <input type="number" placeholder="Price" disabled  id="p5"
+                onkeyup="e()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="q5"
+                onkeyup="e()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="d5"
+                onkeyup="e()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="t5"
+                onkeyup="e()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; ">
+        <input type="checkbox" id="ch6" onclick="h5()">
+        <h3>DRINKS</h3>
+        <div style=" display: inline-block;" id="di2">
+            <input type="number" placeholder="Price" disabled  id="p6"
+                onkeyup="f()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="q6"
+                onkeyup="f()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="d6"
+                onkeyup="f()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="t6"
+                onkeyup="f()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; ">
+        <input type="checkbox" id="ch7" onclick="h6()">
+        <h3>ICE-CREAM</h3>
+        <div style=" display: inline-block;" id="di2">
+            <input type="number" placeholder="Price" disabled  id="p7"
+                onkeyup="g()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="q7"
+                onkeyup="g()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="d7"
+                onkeyup="g()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="t7"
+                onkeyup="g()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;  margin: 20px; margin-left: 50px;justify-content: right ;">
+        <h3>Total :</h3>
+        <input type= "number" id="tot" value="0">
+    </div>
+
+    <div style="display: flex;  margin: 20px; margin-left: 50px;justify-content: right ;">
+        <h3>Discount :</h3>
+        <input type="number" id="dis">
+        <select onchange="cta()" id="z">
+            <option>Type</option>
+            <option>in Rs</option>
+            <option>in %</option>
+        </select>
+    </div>
+    
+    <div style="display: flex;  margin: 20px; margin-left: 50px;justify-content: right ; ">
+        <h3> Payble Amount :</h3>
+        <input type=" number" id="pay">
+
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <button
+            style="padding:10px;font-size: 20px; margin: 20px; border-radius: 5px; background-color: rgb(9, 106, 154); color: black;"
+            id="next" onclick="ot()">Next</button>
+        <button
+            style="padding:10px;font-size: 20px; margin: 20px;border-radius: 5px;background-color: rgb(9, 106, 154); color: black;"
+            onclick="reload()">Reload</button>
+    </div>
+
+</div>
+
+<!-- //Div 2 -->
+
+<div class="dii2" id="dii2">
+    <h1 style="text-align: center; margin: 50px;">Wanderlust Brews</h1>
+    <div style=" display: flex; margin-top: 50px;">
+        <div style="display: flex; margin-left: 30px;">
+            <h3> YOUR NAME :</h3>
+            <input type="text" id="n2" pattern="{A-Za-z}{100}" style="width: 40%; height: 50%;margin-top: 5px;">
+        </div>
+        <div style="display: flex; margin-left: 150px;">
+            <h3>MOBILE NUMBER :</h3>
+            <input type="number" id="m2" style="width: 40%; height: 50%;margin-top: 5px;">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; " id="pdiv1">
+        <!--  -->
+        <h3 id="food1">PIZZA</h3>
+        <div style=" display: inline-block;" >
+            <input type="number" placeholder="Price" disabled  id="pp1"
+                onkeyup="a()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="pq1"
+                onkeyup="a()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="pd1"
+                onkeyup="a()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="pt1"
+                onkeyup="a()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; " id="pdiv2">
+        
+        <h3 >BURGER </h3>
+        <div style=" display: inline-block;" id="pdiv2">
+            <input type="number" placeholder="Price" disabled  id="pp2"
+                onkeyup="b()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="pq2"
+                onkeyup="b()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="pd2"
+                onkeyup="b()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="pt2"
+                onkeyup="c()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; " id="pdiv3">
+        
+        <h3 >PASTA</h3>
+        <div style=" display: inline-block;" id="pdiv3">
+            <input type="number" placeholder="Price" disabled  id="pp3"
+                onkeyup="c()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="pq3"
+                onkeyup="c()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="pd3"
+                onkeyup="c()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="pt3"
+                onkeyup="c()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; " id="pdiv4">
+        
+        <h3 >NOODLES</h3>
+        <div style=" display: inline-block;" id="pdiv4">
+            <input type="number" placeholder="Price" disabled  id="pp4"
+                onkeyup="d()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="pq4"
+                onkeyup="d()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="pd4"
+                onkeyup="d()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="pt4"
+                onkeyup="d()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; " id="pdiv5">
+        
+        <h3>SANDWICH</h3>
+        <div style=" display: inline-block;" id="pdiv5">
+            <input type="number" placeholder="Price" disabled  id="pp5"
+                onkeyup="e()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="pq5"
+                onkeyup="e()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="pd5"
+                onkeyup="e()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="pt5"
+                onkeyup="e()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; " id="pdiv6">
+        
+        <h3>DRINKS</h3>
+        <div style=" display: inline-block;" id="pdiv6">
+            <input type="number" placeholder="Price" disabled  id="pp6"
+                onkeyup="f()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="pq6"
+                onkeyup="f()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="pd6"
+                onkeyup="f()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="pt6"
+                onkeyup="f()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;margin: 20px;justify-content: space-between; margin-top: 50px; " id="pdiv7">
+        
+        <h3>ICE-CREAM</h3>
+        <div style=" display: inline-block;" id="pdiv7">
+            <input type="number" placeholder="Price" disabled  id="pp7"
+                onkeyup="g()" onchange="total()">
+            <input type="number" placeholder="Quantity" disabled  id="pq7"
+                onkeyup="g()" onchange="total()">
+            <input type="number" placeholder="Discount" disabled  id="pd7"
+                onkeyup="g()" onchange="total()">
+            <input type="number" placeholder="Total" disabled  id="pt7"
+                onkeyup="g()" onchange="total()" value="0">
+        </div>
+    </div>
+
+    <div style="display: flex;  margin: 20px; margin-left: 50px;justify-content: right ;">
+        <h3>Total :</h3>
+        <input type= "number" id="ptot" value="0">
+    </div>
+
+    <div style="display: flex;  margin: 20px; margin-left: 50px;justify-content: right ;">
+        <h3>Discount :</h3>
+        <input type="number" id="pdis">
+        <select onchange="cta()" id="z">
+            <option>Type</option>
+            <option>in Rs</option>
+            <option>in %</option>
+        </select>
+    </div>
+    
+    <div style="display: flex;  margin: 20px; margin-left: 50px;justify-content: right ; ">
+        <h3> Payble Amount :</h3>
+        <input type=" number" id="ppay">
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <button
+            style="padding:10px;font-size: 20px; margin: 20px; border-radius: 5px; background-color: rgb(9, 106, 154); color: black;"
+            id="print" class="abcd" onclick="print1()">Print</button>
+</div>
+
+</body>
+<script>
+   
+    function h()
+    { 
+        
+        var a = document.getElementById("ch1");
+        if(a.checked==true)
+        {
+            document.getElementById("p1").disabled = false;
+            document.getElementById("q1").disabled = false;
+            document.getElementById("d1").disabled = false;
+        }
+        else
+        {
+            document.getElementById("p1").disabled = true;
+            document.getElementById("q1").disabled = true;
+            document.getElementById("d1").disabled = true;
+        }
+    }
+    function a()
+    {
+        var a = parseInt(document.getElementById("p1").value);
+        var b = parseInt(document.getElementById("q1").value);
+        var c = parseInt(document.getElementById("d1").value);
+        var d = (a * b) - c;
+        document.getElementById("t1").value = d;
+       
+        total();
+    }
+
+    function h1()
+    { 
+        var a = document.getElementById("ch2");
+        if(a.checked==true)
+        {
+            document.getElementById("p2").disabled = false;
+            document.getElementById("q2").disabled = false;
+            document.getElementById("d2").disabled = false;
+        }
+        else
+        {
+            document.getElementById("p2").disabled = true;
+            document.getElementById("q2").disabled = true;
+            document.getElementById("d2").disabled = true;
+        }
+    }
+    function b()
+    {
+        var a = parseInt(document.getElementById("p2").value);
+        var b = parseInt(document.getElementById("q2").value);
+        var c = parseInt(document.getElementById("d2").value);
+        document.getElementById("t2").value = (a*b)-c;
+        total();
+    }
+
+    function h2()
+    { 
+        var a = document.getElementById("ch3");
+        if(a.checked==true)
+        {
+            document.getElementById("p3").disabled = false;
+            document.getElementById("q3").disabled = false;
+            document.getElementById("d3").disabled = false;
+        }
+        else
+        {
+            document.getElementById("p3").disabled = true;
+            document.getElementById("q3").disabled = true;
+            document.getElementById("d3").disabled = true;
+        }
+    }
+    function c()
+    {
+        var a = parseInt(document.getElementById("p3").value);
+        var b = parseInt(document.getElementById("q3").value);
+        var c = parseInt(document.getElementById("d3").value);
+        document.getElementById("t3").value = (a*b)-c;
+        total();
+    }
+
+    function h3()
+    { 
+        var a = document.getElementById("ch4");
+        if(a.checked==true)
+        {
+            document.getElementById("p4").disabled = false;
+            document.getElementById("q4").disabled = false;
+            document.getElementById("d4").disabled = false;
+        }
+        else
+        {
+            document.getElementById("p4").disabled = true;
+            document.getElementById("q4").disabled = true;
+            document.getElementById("d4").disabled = true;
+        }
+    }
+    function d()
+    {
+        var a = parseInt(document.getElementById("p4").value);
+        var b = parseInt(document.getElementById("q4").value);
+        var c = parseInt(document.getElementById("d4").value);
+        document.getElementById("t4").value = (a*b)-c;
+        total();
+    }
+
+    function h4()
+    { 
+        var a = document.getElementById("ch5");
+        if(a.checked==true)
+        {
+            document.getElementById("p5").disabled = false;
+            document.getElementById("q5").disabled = false;
+            document.getElementById("d5").disabled = false;
+        }
+        else
+        {
+            document.getElementById("p5").disabled = true;
+            document.getElementById("q5").disabled = true;
+            document.getElementById("d5").disabled = true;
+        }
+    }
+    function e()
+    {
+        var a = parseInt(document.getElementById("p5").value);
+        var b = parseInt(document.getElementById("q5").value);
+        var c = parseInt(document.getElementById("d5").value);
+        document.getElementById("t5").value = (a*b)-c;
+        total();
+    }
+
+    function h5()
+    { 
+        var a = document.getElementById("ch6");
+        if(a.checked==true)
+        {
+            document.getElementById("p6").disabled = false;
+            document.getElementById("q6").disabled = false;
+            document.getElementById("d6").disabled = false;
+        }
+        else
+        {
+            document.getElementById("p6").disabled = true;
+            document.getElementById("q6").disabled = true;
+            document.getElementById("d6").disabled = true;
+        }
+    }
+    function f()
+    {
+        var a = parseInt(document.getElementById("p6").value);
+        var b = parseInt(document.getElementById("q6").value);
+        var c = parseInt(document.getElementById("d6").value);
+        document.getElementById("t6").value = (a*b)-c;
+        total();
+    }
+
+    function h6()
+    { 
+        var a = document.getElementById("ch7");
+        if(a.checked==true)
+        {
+            document.getElementById("p7").disabled = false;
+            document.getElementById("q7").disabled = false;
+            document.getElementById("d7").disabled = false;
+        }
+        else
+        {
+            document.getElementById("p7").disabled = true;
+            document.getElementById("q7").disabled = true;
+            document.getElementById("d7").disabled = true;
+        }
+    }
+    function g()
+    {
+        var a = parseInt(document.getElementById("p7").value);
+        var b = parseInt(document.getElementById("q7").value);
+        var c = parseInt(document.getElementById("d7").value);
+        document.getElementById("t7").value = (a*b)-c;
+        total();
+    }
+    var aa = 0;
+    var bb = 0;
+    var cc = 0;
+    var dd = 0;
+    var ee = 0;
+    var ff = 0;
+    var gg = 0;
+    var tt = 0;
+    function total()
+    {
+        
+            var aa = parseInt(document.getElementById("t1").value);
+            var bb = parseInt(document.getElementById("t2").value);
+            var cc = parseInt(document.getElementById("t3").value);
+            var dd = parseInt(document.getElementById("t4").value);
+            var ee = parseInt(document.getElementById("t5").value);
+            var ff = parseInt(document.getElementById("t6").value);
+            var gg = parseInt(document.getElementById("t7").value);
+            var tt = aa + bb + cc + dd + ee + ff + gg ; 
+
+        document.getElementById("tot").value = tt;
+    }
+        // document.getElementById("tot").value = tt;
+
+    function cta()
+    {
+        var a = document.getElementById("tot").value;
+        var b = document.getElementById("dis").value;
+        var c = document.getElementById("z").value;
+        var d;
+
+        if(c == "in %")
+        {
+            d = a - (a*b / 100);
+        }
+        else
+        {
+            d = a - b;
+        }
+        document.getElementById("pay").value = d;
+    }    
+    
+    function abc(){
+        var a = document.getElementById("di1");
+        var b = document.getElementById("dii2");
+        if (b.style.display == "none") {
+            b.style.display = "block";
+            a.style.display = "none";
+
+        } else {
+            b.style.display = "none";
+            a.style.display = "block";
+
+        }
+    }
+
+    function reload()
+    {
+        window.location.reload();
+    }
+
+    function ot()
+    {
+        var a = document.getElementById("n1").value;
+        var b = document.getElementById("m1").value;
+        var c = document.getElementById("tot").value;
+        var d = document.getElementById("dis").value;
+        var e = document.getElementById("pay").value;
+        
+        document.getElementById("n2").value = a;
+        document.getElementById("m2").value = b;
+        document.getElementById("ptot").value = c;
+        document.getElementById("pdis").value = d;
+        document.getElementById("ppay").value = e;
+        abc();
+        ott();
+    }
+
+    function ott()
+    {
+        for (i = 1; i <= 7; i++) {
+            var a = document.getElementById("ch" + i);
+            if (a.checked == true) {
+              
+                var p = document.getElementById("p" + i).value;
+                var q = document.getElementById("q" + i).value;
+                var d = document.getElementById("d" + i).value;
+                var t = document.getElementById("t" + i).value;
+
+                
+                document.getElementById("pp" + i).value = p;
+                document.getElementById("pq" + i).value = q;
+                document.getElementById("pd" + i).value = d;
+                document.getElementById("pt" + i).value = t;
+                document.getElementById("pdiv" + i).style.display = "flex";
+            } else {
+              
+                document.getElementById("pdiv" + i).style.display = "none";
+            }
+        }
+    }
+
+    function print1()
+    {
+       window.print();
+    }
+</script>
+</html>
